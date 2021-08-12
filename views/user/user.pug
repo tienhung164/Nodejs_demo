@@ -1,0 +1,14 @@
+extends ../navbar.pug
+
+block style
+  script(src='/js.js')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js')
+block content
+  .container
+   label Search
+   br
+   input(name="name",type="text",id="input",autocomplete="off",oninput="getDataAjax()") 
+   ul(id="ul").container
+     each item in users
+        li= item 
+   
